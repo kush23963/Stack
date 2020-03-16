@@ -1,0 +1,50 @@
+c = int(input("Enter the no. of stack elements: "))
+
+k = int(input("Enter the no. of times you want to perform the operation: "))
+
+l = []
+
+for i in range(c):
+
+    a= int(input("Enter the stack {} element: ".format(1+i)))
+
+    l.append(a)
+
+for i in range(k):
+    d = int(input("Enter \n1 Push \n2 Pop \n3 Print: "))
+
+    if d==1:
+        
+	if len(l)==c-1:
+
+            print("Overflow\n")
+        
+    	else:
+
+            a= int(input("Enter the stack {} element: ".format(1+i)))
+            
+	    l.append(a)
+
+    elif d==2:
+
+        if len(l)==-1:
+
+            print("Underflow\n")
+
+        else:
+
+            for i in range(0,len(l)):
+
+                if i==(len(l)-1):
+
+                    print("The deleted element is: {}".format(l[i]))
+
+                    l.pop()
+
+    elif d==3:
+
+            print(l)
+
+    else:
+
+        print("Wrong choice\n")
